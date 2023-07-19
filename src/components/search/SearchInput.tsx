@@ -40,8 +40,8 @@ const SearchInput = ({
         className="w-full outline-none"
       />
       {keyword.length > 0 && (
-        <button type="reset" onClick={handleReset}>
-          <IoClose className="text-gray-400 px-4" />
+        <button type="reset" onClick={handleReset} className=" px-4">
+          <IoClose className="text-gray-400" />
         </button>
       )}
       <button type="submit">
