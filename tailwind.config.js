@@ -5,7 +5,7 @@ export default {
     colors: {
       transparent: 'transparent',
       white: '#ffffff',
-      black: '#101010',
+      black: '#1e2025',
       gray: {
         50: '#f4f6fa',
         100: '#edf0f2',
@@ -17,7 +17,10 @@ export default {
       skyblue: '#cae9ff',
       blue: '#007BE9',
       darkblue: '#00449e',
+      dark: '#2d3d50',
+      light: '#f5f5f5',
     },
+    extend: {},
   },
   plugins: [],
 };

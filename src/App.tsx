@@ -1,12 +1,11 @@
-import './App.css';
-import SearchForm from './components/SearchForm';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import './index.css';
+import { routes } from './routes';
+
+const router = createBrowserRouter(routes);
 
 function App() {
-  return (
-    <>
-      <SearchForm />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
