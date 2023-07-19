@@ -12,7 +12,9 @@ const useKeyword = (
 
   const handleKeyDown = useCallback(
     (event: KeyboardEvent) => {
-      if (!isOnFocus) return;
+      if (!isOnFocus) {
+        return;
+      }
 
       if (
         event.key === KEY_NAME.arrowDown ||
@@ -35,7 +37,8 @@ const useKeyword = (
 
       if (event.key === KEY_NAME.enter) {
         setKeyword(searchWords[focusIndex].sickNm);
-        setIsOnFocus(false);
+        setIsOnFocus(true);
+        setFocusIndex(DEFAULT_INDEX);
       }
     },
     [searchWords, focusIndex, isOnFocus, setKeyword, setIsOnFocus],

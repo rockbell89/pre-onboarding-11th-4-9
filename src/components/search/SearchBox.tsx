@@ -42,7 +42,7 @@ const SearchBox = () => {
 
       setIsLoading(false);
       setFocusIndex(DEFAULT_INDEX);
-      setResultWords(words);
+      setResultWords(words.slice(0, 10));
     };
 
     fetchAutocompleteWords();
@@ -60,7 +60,7 @@ const SearchBox = () => {
         onSearch={handleSearch}
         setkeyword={setKeyword}
       />
-      {isOnFocus && (
+      {(isOnFocus || keyword.length > 0) && (
         <div className="mt-2">
           <SearchResult
             isLoading={isLoading}
